@@ -63,6 +63,6 @@
         extra_layer {
           display-name = "Extra";
           status = "reserved";
-        }
+        };
     };
 };
