@@ -1,4 +1,11 @@
-on: [push, pull_request, workflow_dispatch]
+name: Build ZMK firmware
+on:
+  workflow_dispatch:
+  push:
+    paths-ignore:
+      - "keymap-drawer/**"
+      - "assets/**"
+      - "README.md"
 
 jobs:
   build:
