@@ -1,6 +1,6 @@
 ## BleCorne ZMK Firmware
 
-This is my custom [ZMK](https://zmk.dev/) keymap config for the **low profile** Corne (3x6) wireless keyboard from the [Boardsource](https://boardsource.xyz/).
+This is my custom [ZMK](https://zmk.dev/) keymap config for the **low profile** Corne (3x6+3) wireless keyboard.
 
 <img src="./docs/assets/blecorne.JPEG" style="border-radius: 10px"/>
 

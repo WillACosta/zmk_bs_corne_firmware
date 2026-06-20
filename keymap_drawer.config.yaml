@@ -3,7 +3,7 @@ draw_config:
   n_columns: 1
   key_rx: 6
   key_ry: 6
-  footer_text: "Boardsource Wireless Corne SMT"
+  footer_text: "Wireless Corne 3x6+3"
   svg_extra_style: |
     svg.keymap {
       background: #11101a;
