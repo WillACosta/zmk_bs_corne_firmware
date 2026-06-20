@@ -19,5 +19,5 @@ jobs:
       config_path: "keymap_drawer.config.yaml"
       output_folder: "keymap-drawer"
       parse_args: "blecorne:'-c 12'"
-      draw_args: "blecorne:'-n \"333333+3 3+333333\"'"
+      draw_args: "blecorne:'-n 333333+3 3+333333'"
       commit_message: "keymap-drawer render"

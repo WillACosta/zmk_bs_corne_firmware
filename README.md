@@ -14,7 +14,8 @@ This is my custom [ZMK](https://zmk.dev/) keymap config for the **low profile** 
 
 > I've posted about it on Reddit, [check it out](https://www.reddit.com/r/ErgoMechKeyboards/comments/1tvyr2r/comment/osqpd7x/?screen_view_count=2).
 
-You can also browse the [build gallery](https://willacosta.github.io/wireless-corne_zmk_config/gallery/) with more photos of the keyboard.
+> [!TIP]
+> 📸 Browse the **[keyboard build gallery](https://willacosta.github.io/wireless-corne_zmk_config/gallery/)** for more photos of the build!
 
 ![Current keymap](keymap-drawer/blecorne.svg)
 
