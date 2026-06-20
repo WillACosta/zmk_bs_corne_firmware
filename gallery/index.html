@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BleCorne Build Gallery</title>
+    <meta name="description" content="Build photos for a low-profile Boardsource Wireless Corne SMT keyboard.">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #11101a;
+        --panel: #191528;
+        --panel-strong: #211b34;
+        --text: #f5f3ff;
+        --muted: #c4b5fd;
+        --accent: #a855f7;
+        --accent-strong: #c084fc;
+        --border: #4c1d95;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--bg);
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top left, rgba(124, 58, 237, 0.22), transparent 36rem),
+          linear-gradient(180deg, #11101a 0%, #171223 100%);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      header,
+      main,
+      footer {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 48px 0 28px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .brand {
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      .repo-link {
+        border: 1px solid rgba(192, 132, 252, 0.45);
+        border-radius: 999px;
+        color: var(--text);
+        font-size: 0.9rem;
+        padding: 9px 14px;
+        text-decoration: none;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 0;
+        font-size: clamp(2.2rem, 8vw, 5rem);
+        line-height: 0.96;
+      }
+
+      .intro {
+        max-width: 660px;
+        margin: 18px 0 0;
+        color: #ddd6fe;
+        font-size: 1.05rem;
+        line-height: 1.65;
+      }
+
+      .hero {
+        margin-top: 34px;
+        overflow: hidden;
+        border: 1px solid rgba(192, 132, 252, 0.28);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+      }
+
+      .hero img {
+        display: block;
+        width: 100%;
+        max-height: 680px;
+        object-fit: cover;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        padding: 28px 0 56px;
+      }
+
+      .photo {
+        display: block;
+        overflow: hidden;
+        border: 1px solid rgba(192, 132, 252, 0.22);
+        border-radius: 8px;
+        background: var(--panel-strong);
+        min-height: 240px;
+        outline-offset: 4px;
+      }
+
+      .photo:focus-visible {
+        outline: 2px solid var(--accent-strong);
+      }
+
+      .photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        transition: transform 180ms ease, filter 180ms ease;
+      }
+
+      .photo:hover img,
+      .photo:focus-visible img {
+        filter: saturate(1.08);
+        transform: scale(1.025);
+      }
+
+      .section-title {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 42px;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(1.4rem, 4vw, 2.2rem);
+      }
+
+      .count {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      footer {
+        border-top: 1px solid rgba(192, 132, 252, 0.2);
+        color: #a78bfa;
+        padding: 24px 0 36px;
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 640px) {
+        header,
+        main,
+        footer {
+          width: min(100% - 20px, 1120px);
+        }
+
+        header {
+          padding-top: 28px;
+        }
+
+        nav,
+        .section-title {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .gallery {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 10px;
+        }
+
+        .photo {
+          min-height: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Primary navigation">
+        <a class="brand" href="../">BleCorne ZMK</a>
+        <a class="repo-link" href="https://github.com/WillACosta/wireless-corne_zmk_config">Firmware repo</a>
+      </nav>
+
+      <h1>Keyboard Build Gallery</h1>
+      <p class="intro">
+        Build photos for my low-profile Boardsource Wireless Corne SMT with aluminum plates, NuPhy nSA keycaps, and Gateron Low Profile Blush Silent switches.
+      </p>
+
+      <div class="hero">
+        <img src="../assets/blecorne.JPEG" alt="Finished low-profile wireless Corne keyboard build">
+      </div>
+    </header>
+
+    <main>
+      <div class="section-title">
+        <h2>Build Photos</h2>
+        <span class="count">17 photos</span>
+      </div>
+
+      <section class="gallery" aria-label="Keyboard build photo gallery">
+        <a class="photo" href="../assets/gallery/IMG_0648.JPEG"><img src="../assets/gallery/IMG_0648.JPEG" alt="Wireless Corne keyboard build photo 1" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0651.JPEG"><img src="../assets/gallery/IMG_0651.JPEG" alt="Wireless Corne keyboard build photo 2" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0655.JPEG"><img src="../assets/gallery/IMG_0655.JPEG" alt="Wireless Corne keyboard build photo 3" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0656.JPEG"><img src="../assets/gallery/IMG_0656.JPEG" alt="Wireless Corne keyboard build photo 4" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0657.JPEG"><img src="../assets/gallery/IMG_0657.JPEG" alt="Wireless Corne keyboard build photo 5" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0658.JPEG"><img src="../assets/gallery/IMG_0658.JPEG" alt="Wireless Corne keyboard build photo 6" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0660.JPEG"><img src="../assets/gallery/IMG_0660.JPEG" alt="Wireless Corne keyboard build photo 7" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0661.JPEG"><img src="../assets/gallery/IMG_0661.JPEG" alt="Wireless Corne keyboard build photo 8" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0662.JPEG"><img src="../assets/gallery/IMG_0662.JPEG" alt="Wireless Corne keyboard build photo 9" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0663.JPEG"><img src="../assets/gallery/IMG_0663.JPEG" alt="Wireless Corne keyboard build photo 10" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0664.JPEG"><img src="../assets/gallery/IMG_0664.JPEG" alt="Wireless Corne keyboard build photo 11" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0665.JPEG"><img src="../assets/gallery/IMG_0665.JPEG" alt="Wireless Corne keyboard build photo 12" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0666.JPEG"><img src="../assets/gallery/IMG_0666.JPEG" alt="Wireless Corne keyboard build photo 13" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0687.JPEG"><img src="../assets/gallery/IMG_0687.JPEG" alt="Wireless Corne keyboard build photo 14" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0688.JPEG"><img src="../assets/gallery/IMG_0688.JPEG" alt="Wireless Corne keyboard build photo 15" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0585.JPEG"><img src="../assets/gallery/IMG_0585.JPEG" alt="Wireless Corne keyboard build photo 16" loading="lazy"></a>
+        <a class="photo" href="../assets/gallery/IMG_0586.JPEG"><img src="../assets/gallery/IMG_0586.JPEG" alt="Wireless Corne keyboard build photo 17" loading="lazy"></a>
+      </section>
+    </main>
+
+    <footer>
+      Photos and firmware for the BleCorne ZMK build.
+    </footer>
+  </body>
+</html>

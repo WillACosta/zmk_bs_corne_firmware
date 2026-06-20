@@ -1,0 +1,23 @@
+name: Draw ZMK keymaps
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "config/*.keymap"
+      - "config/*.dtsi"
+      - "keymap_drawer.config.yaml"
+      - ".github/workflows/draw-keymaps.yml"
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      keymap_patterns: "config/*.keymap"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"
+      parse_args: "blecorne:'-c 12'"
+      draw_args: "blecorne:'-z corneish_zen -l foostan_corne_6col_layout'"
+      commit_message: "keymap-drawer render"

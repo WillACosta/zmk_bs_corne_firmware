@@ -1,0 +1,71 @@
+layout: {zmk_keyboard: blecorne, layout_name: foostan_corne_6col_layout}
+layers:
+  Base:
+  - [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC]
+  - [LCTRL, A, S, D, F, G, H, J, K, L, ;, '''']
+  - [LSHFT, Z, X, C, V, B, N, M, ',', ., /, ESC]
+  - [LGUI, Symbol, SPACE, RET, Numbers, RALT]
+  Symbol:
+  - [TAB, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
+  - - BT CLR
+    - BT 0
+    - BT 1
+    - BT 2
+    - BT 3
+    - BT 4
+    - LEFT
+    - DOWN
+    - UP
+    - RIGHT
+    - {type: trans}
+    - {type: trans}
+  - - LSHFT
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - LGUI
+    - {type: held}
+    - SPACE
+    - RET
+    - {type: trans}
+    - RALT
+  Numbers:
+  - [TAB, '!', '@', '#', $, '%', ^, '&', '*', (, ), BSPC]
+  - - LCTRL
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '-'
+    - '='
+    - '['
+    - ']'
+    - \
+    - '`'
+  - - LSHFT
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - _
+    - +
+    - '{'
+    - '}'
+    - '|'
+    - '~'
+  - - LGUI
+    - {type: trans}
+    - SPACE
+    - RET
+    - {type: held}
+    - RALT
