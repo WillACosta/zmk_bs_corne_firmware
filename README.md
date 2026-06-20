@@ -4,6 +4,9 @@ This is my custom [ZMK](https://zmk.dev/) keymap config for the **low profile** 
 
 <img src="./assets/blecorne.JPEG" style="border-radius: 10px"/>
 
+> [!TIP]
+> 📸 Browse the **[keyboard build gallery](https://willacosta.github.io/wireless-corne_zmk_config/gallery/)** for more photos of the build!
+
 ## Highlights of this build
 
 - Wireless PCB from BoardSource
@@ -13,9 +16,6 @@ This is my custom [ZMK](https://zmk.dev/) keymap config for the **low profile** 
 - Anodized aluminum top plates (manufactured through JLCCNC)
 
 > I've posted about it on Reddit, [check it out](https://www.reddit.com/r/ErgoMechKeyboards/comments/1tvyr2r/comment/osqpd7x/?screen_view_count=2).
-
-> [!TIP]
-> 📸 Browse the **[keyboard build gallery](https://willacosta.github.io/wireless-corne_zmk_config/gallery/)** for more photos of the build!
 
 ![Current keymap](keymap-drawer/blecorne.svg)
 
