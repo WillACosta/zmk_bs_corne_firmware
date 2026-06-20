@@ -5,7 +5,9 @@ on:
     paths-ignore:
       - "keymap-drawer/**"
       - "assets/**"
+      - "gallery/**"
       - "README.md"
+      - ".github/workflows/pages.yml"
 
 jobs:
   build:
