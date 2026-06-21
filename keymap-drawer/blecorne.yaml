@@ -170,7 +170,7 @@ layers:
     - {type: trans}
     - $$mdi:mouse-move-up$$
     - $$mdi:mouse-left-click$$
-    - $$mdi:mouse-scroll$$
+    - $$mdi:mouse-scroll-wheel$$
     - $$mdi:mouse-right-click$$
     - {type: trans}
     - {type: trans}
