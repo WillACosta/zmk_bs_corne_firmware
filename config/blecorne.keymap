@@ -19,6 +19,41 @@
             bindings = <&kp TAB>;
             key-positions = <1 2>;
         };
+
+        home_combo {
+            bindings = <&kp HOME>;
+            key-positions = <22 23>;
+        };
+
+        end_combo {
+            bindings = <&kp END>;
+            key-positions = <24 25>;
+        };
+
+        bksp_combo {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <11 10>;
+        };
+
+        pgdn_combo {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <36 37>;
+        };
+
+        pgup_combo {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <7 8>;
+        };
+
+        ctrl_w_combo {
+            bindings = <&kp LC(W)>;
+            key-positions = <2 3>;
+        };
+
+        ctrl_a_combo {
+            bindings = <&kp LC(A)>;
+            key-positions = <16 15>;
+        };
     };
 
     behaviors {
@@ -101,6 +136,7 @@
         };
 
         device_layer {
+            display-name = "Device"
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -110,6 +146,7 @@
         };
 
         mouse_layer {
+            display-name = "Mouse"
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -123,8 +160,8 @@
         compatible = "zmk,conditional-layers";
 
         device {
-            if-layers = <0 2>;
-            then-layer = <3>;
+            if-layers = <1 2>;
+            then-layer = <4>;
         };
     };
 };
