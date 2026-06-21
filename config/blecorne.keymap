@@ -136,7 +136,7 @@
         };
 
         device_layer {
-            display-name = "Device"
+            display-name = "Device";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -146,7 +146,7 @@
         };
 
         mouse_layer {
-            display-name = "Mouse"
+            display-name = "Mouse";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
