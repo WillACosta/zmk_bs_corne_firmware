@@ -108,6 +108,61 @@
         object-fit: cover;
       }
 
+      /* ── Video showcase ─────────────────────────────────────── */
+      .video-wrap {
+        position: relative;
+        margin-top: 42px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid rgba(192, 132, 252, 0.30);
+        background: var(--panel);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.38), 0 0 0 1px rgba(168, 85, 247, 0.12);
+      }
+
+      .video-wrap video {
+        display: block;
+        width: 100%;
+        max-height: 680px;
+        object-fit: contain;
+        background: #0d0b14;
+      }
+
+      .video-badge {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(17, 16, 26, 0.72);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(192, 132, 252, 0.28);
+        border-radius: 999px;
+        padding: 5px 12px 5px 8px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--muted);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        pointer-events: none;
+      }
+
+      .video-badge-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 6px var(--accent);
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50%       { opacity: 0.5; transform: scale(0.85); }
+      }
+
+      /* ── Photo gallery ──────────────────────────────────────── */
       .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -216,6 +271,24 @@
 
     <main>
       <div class="section-title">
+        <h2>Showcase Video</h2>
+      </div>
+
+      <div class="video-wrap">
+        <div class="video-badge"><span class="video-badge-dot"></span>Build Showcase</div>
+        <video
+          id="showcase-video"
+          src="../assets/gallery/corne_showcase.mp4"
+          controls
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="Corne keyboard build showcase video"
+        ></video>
+      </div>
+
+      <div class="section-title" style="margin-top: 52px;">
         <h2>Build Photos</h2>
         <span class="count">17 photos</span>
       </div>
@@ -244,5 +317,23 @@
     <footer>
       Photos and firmware for the BleCorne ZMK build.
     </footer>
+
+    <script>
+      // Auto-play the showcase video when it scrolls into view
+      const video = document.getElementById('showcase-video');
+      if (video && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              video.play().catch(() => {});
+            } else {
+              video.pause();
+            }
+          },
+          { threshold: 0.3 }
+        );
+        observer.observe(video);
+      }
+    </script>
   </body>
 </html>
