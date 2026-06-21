@@ -162,7 +162,7 @@ parse_config:
     # ── Mouse ────────────────────────────────────────────────────────────────
     "&mkp LCLK":       "$$mdi:mouse-left-click$$"
     "&mkp RCLK":       "$$mdi:mouse-right-click$$"
-    "&mkp MCLK":       "$$mdi:mouse-scroll$$"
+    "&mkp MCLK":       "$$mdi:mouse-scroll-wheel$$"
     "&mkp MB4":        "$$mdi:mouse-move-up$$"
     "&mmv MOVE_LEFT":  "$$mdi:cursor-move$$"
     "&mmv MOVE_RIGHT": "$$mdi:cursor-move$$"
