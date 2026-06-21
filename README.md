@@ -40,28 +40,40 @@ The 8-pin header on each side (identical, not mirrored) is read from left to rig
 
 ### Battery
 
-If shipping allows, batteries are included. The PCB features a micro JST connector (BM02B-ACHSS-GAN-ETF) and labeled solder pads (+/-) for custom installs.
+I'm using a 403017 315mAh LiPo battery on each half. The keyboard lasts for over a month with constant usage. Note that I use some power saving config provided by ZMK:
 
-**Max Dimensions:**
+```toml
+CONFIG_ZMK_SLEEP=y
+CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=3600000 // Go to sleep after 1h
+...
+```
 
-* **Choc:** 30x17x3mm
-* **MX:** 30x17x6mm
+## Aluminum Plates
+
+I've designed the top aluminum plates based on the original plate for the Unicorne which is open-source, but BoardSource doesn't provide the files for their SMT Wireless PCB. So I had to come up with the measurements by myself.
+
+<img src="./docs/assets/blecorne_plates.png" style="border-radius: 10px"/>
+
+I've [open-sourced](https://github.com/WillACosta/boardsource-wireless-plate-files) the KiCad files, so you can try them if you own a BoardSource PCB.
+
+> **Note that these plates are ONLY compatible with the BoardSource Unicorne case**, but you can of course use them with other cases if you modify the layout. I have tested them with a sandwich case and they worked well.
 
 ## Flashing instructions
 
-- Go to the [ZMK Keymap Editor](https://nickcoutsos.github.io/keymap-editor/), connect this repository and add the desired keys.
-- Save the layout, after that go to the github actions tab and wait for the _firmware_ building process to finish.
+- Fork this repository
+- Go to the [ZMK Keymap Editor](https://nickcoutsos.github.io/keymap-editor/), connect your GitHub Account, then give permissions to the cloned repository.
+- Save your layout, then go to the GitHub Actions tab and wait for the _firmware_ build process to finish.
 - Download the `.zip` file and extract the files.
 
-> You will notice that we have three files with the `.uf2` extension, we'll use them to flash the new firmware to halves.
+> You will notice that we have three files with the `.uf2` extension, we'll use them to flash the new firmware.
 
-- Turn off the keyboard halve, and plug it with the USB-C cable, reset the keyboard by pressing the "reset button" twice.
-- After the controller will recognized by the computer as an external drive, copy and paste the appropriate `.uf2` file to it, the device will disconnect automatically after the flashing process.
-- Do the same thing to the other halve.
+- Turn off the keyboard half, plug it in with the USB-C cable, and reset the keyboard by pressing the "reset button" twice, or use a pre-defined "&bootloader" behavior.
+- The MCU will be recognized by the computer as an external drive, copy and paste the appropriate `.uf2` file to it, the device will disconnect automatically after the flashing process.
+- Do the same thing to the other half.
 
 > [!NOTE]
-> Sometimes a message might be showed after flashing the keyboard with the `.uf2` files, but generally we can just ignore it, as it happens after the flash process finishes and the micro controller unmount automatically before the OS knowing if the process was successful, see the [troubleshooting section](https://v0-3-branch.zmk.dev/docs/troubleshooting/flashing-issues) of ZMK for details.
+> Sometimes a message might be shown after flashing the keyboard with the `.uf2` files, but generally it can be ignored. This happens because the flash process finishes and the microcontroller unmounts automatically before the OS knows whether the process was successful. See the [troubleshooting section](https://v0-3-branch.zmk.dev/docs/troubleshooting/flashing-issues) of ZMK for details.
 
-- Now you need to turn on the halves and press the "reset button" one time on each halve (at the same time), so that the parts can connect and communicate between each other.
+> If the halves do not communicate with each other after the flashing process, you may need to turn on the halves and press the "reset button" on both halves at the same time, so they can synchronize.
 
 > For further information go to the [official documentation](https://v0-3-branch.zmk.dev/docs/user-setup#flashing-uf2-files) for ZMK.
