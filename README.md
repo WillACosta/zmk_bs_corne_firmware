@@ -40,7 +40,7 @@ The 8-pin header on each side (identical, not mirrored) is read from left to rig
 
 ### Battery
 
-I'm using a 403017 315mAh LiPo battery on each half. The keyboard lasts for over a month with constant usage. Note that I use some power saving config provided by ZMK:
+I'm using a 601530 315mAh LiPo battery on each half. The keyboard lasts for over a month with constant usage. Note that I use some power saving config provided by ZMK:
 
 ```toml
 CONFIG_ZMK_SLEEP=y
