@@ -1,92 +1,131 @@
 layout: {zmk_keyboard: blecorne, layout_name: foostan_corne_6col_layout}
 layers:
   Base:
-  - [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC]
+  - [TAB, Q, W, E, R, T, Y, U, I, O, P, '`']
   - - {t: ESCAPE, h: LEFT SHIFT}
-    - A
-    - S
-    - D
-    - F
+    - {t: A, h: LEFT GUI}
+    - {t: S, h: LEFT ALT}
+    - {t: D, h: LEFT CONTROL}
+    - {t: F, h: LEFT SHIFT}
     - G
     - H
-    - J
-    - K
-    - L
-    - ;
+    - {t: J, h: LEFT SHIFT}
+    - {t: K, h: LEFT CONTROL}
+    - {t: L, h: LEFT ALT}
+    - {t: ;, h: LEFT GUI}
     - ''''
-  - [LEFT CONTROL, Z, X, C, V, B, N, M, ',', ., /, ESC]
-  - [LGUI, Symbol, SPACE, RET, Num, BACKSPACE]
+  - [LEFT CONTROL, Z, X, C, V, B, N, M, ',', ., /, ESCAPE]
+  - - LGUI
+    - '&td_device'
+    - SPACE
+    - RET
+    - Num
+    - {t: BACKSPACE, h: LEFT ALT}
   Symbol:
-  - [TAB, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
-  - - BT CLR
+  - - {type: trans}
+    - '!'
+    - '@'
+    - '#'
+    - $
+    - '%'
+    - ^
+    - '&'
+    - '*'
+    - (
+    - )
+    - {type: trans}
+  - - '&bootloader'
+    - {type: trans}
+    - /
+    - \
+    - '['
+    - ']'
+    - '-'
+    - '='
+    - '`'
+    - ''''
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - '?'
+    - '|'
+    - '{'
+    - '}'
+    - _
+    - +
+    - '~'
+    - '"'
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - ''
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - DELETE
+  Num:
+  - - {type: trans}
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - {type: trans}
+  - - {type: trans}
+    - F2
+    - F5
+    - {type: trans}
+    - F11
+    - F12
+    - LEFT ARROW
+    - DOWN ARROW
+    - UP ARROW
+    - RIGHT ARROW
+    - {type: trans}
+    - '&bootloader'
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+  Device:
+  - - {type: trans}
     - BT 0
     - BT 1
     - BT 2
     - BT 3
     - BT 4
-    - LEFT
-    - DOWN
-    - UP
-    - RIGHT
-    - {type: trans}
-    - {type: trans}
-  - - LSHFT
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-  - - LGUI
-    - {type: held}
-    - SPACE
-    - RET
-    - {type: trans}
-    - RALT
-  Num:
-  - [TAB, '!', '@', '#', $, '%', ^, '&', '*', (, ), BSPC]
-  - - LCTRL
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - '-'
-    - '='
-    - '['
-    - ']'
-    - \
-    - '`'
-  - - LSHFT
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - _
-    - +
-    - '{'
-    - '}'
-    - '|'
-    - '~'
-  - - LGUI
-    - {type: trans}
-    - SPACE
-    - RET
-    - {type: held}
-    - RALT
-  Device:
-  - - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+  - - BT CLR
+    - BRIGHTNESS INC
+    - BRIGHTNESS INC
+    - PREVIOUS
+    - PLAY PAUSE
+    - NEXT
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -96,21 +135,9 @@ layers:
   - - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-  - - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - MUTE
+    - VOL DN
+    - VOL UP
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -130,22 +157,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-  - - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - '&mkp MB4'
+    - '&mkp LCLK'
+    - '&mkp MCLK'
+    - '&mkp RCLK'
     - {type: trans}
     - {type: trans}
   - - {type: trans}
@@ -154,14 +169,26 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - '&mmv MOVE_LEFT'
+    - '&mmv MOVE_DOWN'
+    - '&mmv MOVE_UP'
+    - '&mmv MOVE_RIGHT'
     - {type: trans}
     - {type: trans}
   - - {type: trans}
-    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '&msc SCRL_LEFT'
+    - '&msc SCRL_DOWN'
+    - '&msc SCRL_UP'
+    - '&msc SCRL_RIGHT'
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - ''
     - {type: trans}
     - {type: trans}
     - {type: held}
@@ -169,17 +196,17 @@ layers:
 combos:
 - p: [1, 2]
   k: TAB
-- p: [22, 23]
+- p: [18, 19]
   k: HOME
-- p: [24, 25]
+- p: [20, 21]
   k: END
-- p: [11, 10]
+- p: [10, 9]
   k: BACKSPACE
-- p: [36, 37]
+- p: [30, 31]
   k: PAGE DOWN
-- p: [7, 8]
+- p: [7, 6]
   k: PAGE UP
-- p: [2, 3]
+- p: [25, 26]
   k: Ctl+W
-- p: [16, 15]
+- p: [13, 14]
   k: Ctl+A
