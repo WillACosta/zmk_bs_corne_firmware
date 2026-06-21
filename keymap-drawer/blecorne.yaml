@@ -1,71 +1,223 @@
 layout: {zmk_keyboard: blecorne, layout_name: foostan_corne_6col_layout}
 layers:
   Base:
-  - [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC]
-  - [LCTRL, A, S, D, F, G, H, J, K, L, ;, '''']
-  - [LSHFT, Z, X, C, V, B, N, M, ',', ., /, ESC]
-  - [LGUI, Symbol, SPACE, RET, Numbers, RALT]
+  - ['$$mdi:keyboard-tab$$', Q, W, E, R, T, Y, U, I, O, P, '`']
+  - - {t: '$$mdi:keyboard-esc$$', h: ⇧}
+    - {t: A, h: ⌘}
+    - {t: S, h: ⌥}
+    - {t: D, h: ⌃}
+    - {t: F, h: ⇧}
+    - G
+    - H
+    - {t: J, h: ⇧}
+    - {t: K, h: ⌃}
+    - {t: L, h: ⌥}
+    - {t: ;, h: ⌘}
+    - ''''
+  - - {t: ⌃, type: ghost}
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - N
+    - M
+    - ','
+    - .
+    - /
+    - $$mdi:keyboard-esc$$
+  - - {t: ⌘, type: ghost}
+    - '&td_device'
+    - $$mdi:keyboard-space$$
+    - $$mdi:keyboard-return$$
+    - Num
+    - {t: '$$mdi:backspace$$', h: ⌥}
   Symbol:
-  - [TAB, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
-  - - BT CLR
-    - BT 0
-    - BT 1
-    - BT 2
-    - BT 3
-    - BT 4
-    - LEFT
-    - DOWN
-    - UP
-    - RIGHT
+  - - {type: trans}
+    - '!'
+    - '@'
+    - '#'
+    - $
+    - '%'
+    - ^
+    - '&'
+    - '*'
+    - (
+    - )
     - {type: trans}
+  - - {t: '$$mdi:restart$$', type: held}
     - {type: trans}
-  - - LSHFT
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-  - - LGUI
-    - {type: held}
-    - SPACE
-    - RET
-    - {type: trans}
-    - RALT
-  Numbers:
-  - [TAB, '!', '@', '#', $, '%', ^, '&', '*', (, ), BSPC]
-  - - LCTRL
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - '-'
-    - '='
+    - /
+    - \
     - '['
     - ']'
-    - \
+    - '-'
+    - '='
     - '`'
-  - - LSHFT
+    - ''''
     - {type: trans}
     - {type: trans}
+  - - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - _
-    - +
+    - '?'
+    - '|'
     - '{'
     - '}'
-    - '|'
+    - _
+    - +
     - '~'
-  - - LGUI
+    - '"'
     - {type: trans}
-    - SPACE
-    - RET
+    - {type: trans}
+  - - {type: trans}
+    - ''
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - $$mdi:backspace-reverse$$
+  Num:
+  - - {type: trans}
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - {type: trans}
+  - - {type: trans}
+    - F2
+    - F5
+    - {type: trans}
+    - F11
+    - F12
+    - $$mdi:arrow-left$$
+    - $$mdi:arrow-down$$
+    - $$mdi:arrow-up$$
+    - $$mdi:arrow-right$$
+    - {type: trans}
+    - {t: '$$mdi:restart$$', type: held}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - {type: held}
-    - RALT
+    - {type: trans}
+  Device:
+  - - {type: trans}
+    - {t: '$$mdi:bluetooth$$', s: '0'}
+    - {t: '$$mdi:bluetooth$$', s: '1'}
+    - {t: '$$mdi:bluetooth$$', s: '2'}
+    - {t: '$$mdi:bluetooth$$', s: '3'}
+    - {t: '$$mdi:bluetooth$$', s: '4'}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {t: '$$mdi:bluetooth-off$$', type: held}
+    - $$mdi:brightness-7$$
+    - $$mdi:brightness-7$$
+    - $$mdi:skip-previous$$
+    - $$mdi:play-pause$$
+    - $$mdi:skip-next$$
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - $$mdi:volume-mute$$
+    - $$mdi:volume-low$$
+    - $$mdi:volume-high$$
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  Mouse:
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - $$mdi:mouse-move-up$$
+    - $$mdi:mouse-left-click$$
+    - $$mdi:mouse-scroll-wheel$$
+    - $$mdi:mouse-right-click$$
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - $$mdi:cursor-move$$
+    - $$mdi:cursor-move$$
+    - $$mdi:cursor-move$$
+    - $$mdi:cursor-move$$
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - $$mdi:gesture-swipe-left$$
+    - $$mdi:gesture-swipe-down$$
+    - $$mdi:gesture-swipe-up$$
+    - $$mdi:gesture-swipe-right$$
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - ''
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+combos:
+- p: [1, 2]
+  k: $$mdi:keyboard-tab$$
+- p: [18, 19]
+  k: $$mdi:home$$
+- p: [20, 21]
+  k: {t: End, type: ghost}
+- p: [10, 9]
+  k: $$mdi:backspace$$
+- p: [30, 31]
+  k: $$mdi:chevron-double-down$$
+- p: [7, 6]
+  k: $$mdi:chevron-double-up$$
+- p: [25, 26]
+  k: Ctl+W
+- p: [13, 14]
+  k: Ctl+A

@@ -3,7 +3,10 @@ draw_config:
   n_columns: 1
   key_rx: 6
   key_ry: 6
-  footer_text: "Boardsource Wireless Corne SMT"
+  footer_text: "Wireless Corne 3x6+3"
+  glyph_tap_size: 14
+  glyph_hold_size: 11
+  glyph_shifted_size: 10
   svg_extra_style: |
     svg.keymap {
       background: #11101a;
@@ -64,14 +67,122 @@ draw_config:
       stroke: #a78bfa;
     }
 
+    /* Glyph icon fill inherits from text color */
+    svg.keymap g.key g.glyph path,
+    svg.keymap g.key g.glyph circle,
+    svg.keymap g.key g.glyph rect {
+      fill: #e9d5ff;
+    }
+
+    svg.keymap g.key.held g.glyph path,
+    svg.keymap g.key.held g.glyph circle {
+      fill: #f3e8ff;
+    }
+
 parse_config:
   trans_legend:
     t: ""
     type: trans
+
+  # ---------------------------------------------------------------------------
+  # Raw binding → legend mapping with glyphs
+  # ---------------------------------------------------------------------------
   raw_binding_map:
-    "&bt BT_CLR": "BT CLR"
-    "&bt BT_SEL 0": "BT 0"
-    "&bt BT_SEL 1": "BT 1"
-    "&bt BT_SEL 2": "BT 2"
-    "&bt BT_SEL 3": "BT 3"
-    "&bt BT_SEL 4": "BT 4"
+
+    # ── Bluetooth ────────────────────────────────────────────────────────────
+    "&bt BT_CLR":   {t: "$$mdi:bluetooth-off$$", type: held}
+    "&bt BT_SEL 0": {t: "$$mdi:bluetooth$$", s: "0"}
+    "&bt BT_SEL 1": {t: "$$mdi:bluetooth$$", s: "1"}
+    "&bt BT_SEL 2": {t: "$$mdi:bluetooth$$", s: "2"}
+    "&bt BT_SEL 3": {t: "$$mdi:bluetooth$$", s: "3"}
+    "&bt BT_SEL 4": {t: "$$mdi:bluetooth$$", s: "4"}
+
+    # ── Brightness ───────────────────────────────────────────────────────────
+    "&kp C_BRIGHTNESS_INC": "$$mdi:brightness-7$$"
+    "&kp C_BRIGHTNESS_DEC": "$$mdi:brightness-4$$"
+    "&kp C_BRI_UP":         "$$mdi:brightness-7$$"
+    "&kp C_BRI_DN":         "$$mdi:brightness-4$$"
+
+    # ── Volume & Media ───────────────────────────────────────────────────────
+    "&kp C_MUTE":       "$$mdi:volume-mute$$"
+    "&kp C_VOL_UP":     "$$mdi:volume-high$$"
+    "&kp C_VOL_DN":     "$$mdi:volume-low$$"
+    "&kp C_VOL_INC":    "$$mdi:volume-high$$"
+    "&kp C_VOL_DEC":    "$$mdi:volume-low$$"
+    "&kp C_PREVIOUS":   "$$mdi:skip-previous$$"
+    "&kp C_NEXT":       "$$mdi:skip-next$$"
+    "&kp C_PLAY_PAUSE": "$$mdi:play-pause$$"
+    "&kp C_PP":         "$$mdi:play-pause$$"
+
+    # ── Arrow keys ───────────────────────────────────────────────────────────
+    "&kp LEFT_ARROW":  "$$mdi:arrow-left$$"
+    "&kp RIGHT_ARROW": "$$mdi:arrow-right$$"
+    "&kp UP_ARROW":    "$$mdi:arrow-up$$"
+    "&kp DOWN_ARROW":  "$$mdi:arrow-down$$"
+    "&kp LEFT":        "$$mdi:arrow-left$$"
+    "&kp RIGHT":       "$$mdi:arrow-right$$"
+    "&kp UP":          "$$mdi:arrow-up$$"
+    "&kp DOWN":        "$$mdi:arrow-down$$"
+
+    # ── Navigation ───────────────────────────────────────────────────────────
+    "&kp HOME":      "$$mdi:home$$"
+    "&kp END":       {t: "End", type: ghost}
+    "&kp PAGE_UP":   "$$mdi:chevron-double-up$$"
+    "&kp PAGE_DOWN": "$$mdi:chevron-double-down$$"
+    "&kp PG_UP":     "$$mdi:chevron-double-up$$"
+    "&kp PG_DN":     "$$mdi:chevron-double-down$$"
+
+    # ── System / Editing ─────────────────────────────────────────────────────
+    "&kp BACKSPACE": "$$mdi:backspace$$"
+    "&kp DELETE":    "$$mdi:backspace-reverse$$"
+    "&kp TAB":       "$$mdi:keyboard-tab$$"
+    "&kp ESCAPE":    "$$mdi:keyboard-esc$$"
+    "&kp RET":       "$$mdi:keyboard-return$$"
+    "&kp ENTER":     "$$mdi:keyboard-return$$"
+    "&kp SPACE":     "$$mdi:keyboard-space$$"
+
+    # ── Modifiers — Mac style (symbols) ──────────────────────────────────────
+    "&kp LEFT_GUI":      {t: "⌘", type: ghost}
+    "&kp RIGHT_GUI":     {t: "⌘", type: ghost}
+    "&kp LGUI":          {t: "⌘", type: ghost}
+    "&kp RGUI":          {t: "⌘", type: ghost}
+    "&kp LEFT_ALT":      {t: "⌥", type: ghost}
+    "&kp RIGHT_ALT":     {t: "⌥", type: ghost}
+    "&kp LALT":          {t: "⌥", type: ghost}
+    "&kp RALT":          {t: "⌥", type: ghost}
+    "&kp LEFT_SHIFT":    {t: "⇧", type: ghost}
+    "&kp RIGHT_SHIFT":   {t: "⇧", type: ghost}
+    "&kp LSHIFT":        {t: "⇧", type: ghost}
+    "&kp RSHIFT":        {t: "⇧", type: ghost}
+    "&kp LEFT_CONTROL":  {t: "⌃", type: ghost}
+    "&kp RIGHT_CONTROL": {t: "⌃", type: ghost}
+    "&kp LCTRL":         {t: "⌃", type: ghost}
+    "&kp RCTRL":         {t: "⌃", type: ghost}
+
+    # ── Mouse ────────────────────────────────────────────────────────────────
+    "&mkp LCLK":       "$$mdi:mouse-left-click$$"
+    "&mkp RCLK":       "$$mdi:mouse-right-click$$"
+    "&mkp MCLK":       "$$mdi:mouse-scroll-wheel$$"
+    "&mkp MB4":        "$$mdi:mouse-move-up$$"
+    "&mmv MOVE_LEFT":  "$$mdi:cursor-move$$"
+    "&mmv MOVE_RIGHT": "$$mdi:cursor-move$$"
+    "&mmv MOVE_UP":    "$$mdi:cursor-move$$"
+    "&mmv MOVE_DOWN":  "$$mdi:cursor-move$$"
+    "&msc SCRL_LEFT":  "$$mdi:gesture-swipe-left$$"
+    "&msc SCRL_RIGHT": "$$mdi:gesture-swipe-right$$"
+    "&msc SCRL_UP":    "$$mdi:gesture-swipe-up$$"
+    "&msc SCRL_DOWN":  "$$mdi:gesture-swipe-down$$"
+
+    # ── Bootloader ───────────────────────────────────────────────────────────
+    "&bootloader": {t: "$$mdi:restart$$", type: held}
+
+    # ── Hold/mod labels used in HRM (shown as Mac modifier symbols) ──────────
+    # These appear in the `h:` (hold) field of base layer keys
+    "LEFT_GUI":      "⌘"
+    "LEFT_ALT":      "⌥"
+    "LEFT_SHIFT":    "⇧"
+    "LEFT_CONTROL":  "⌃"
+    "RIGHT_GUI":     "⌘"
+    "RIGHT_ALT":     "⌥"
+    "RIGHT_SHIFT":   "⇧"
+    "RIGHT_CONTROL": "⌃"
