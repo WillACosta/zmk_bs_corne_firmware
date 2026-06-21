@@ -2,9 +2,20 @@ layout: {zmk_keyboard: blecorne, layout_name: foostan_corne_6col_layout}
 layers:
   Base:
   - [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC]
-  - [LCTRL, A, S, D, F, G, H, J, K, L, ;, '''']
-  - [LSHFT, Z, X, C, V, B, N, M, ',', ., /, ESC]
-  - [LGUI, Symbol, SPACE, RET, Numbers, RALT]
+  - - {t: ESCAPE, h: LEFT SHIFT}
+    - A
+    - S
+    - D
+    - F
+    - G
+    - H
+    - J
+    - K
+    - L
+    - ;
+    - ''''
+  - [LEFT CONTROL, Z, X, C, V, B, N, M, ',', ., /, ESC]
+  - [LGUI, Symbol, SPACE, RET, Num, BACKSPACE]
   Symbol:
   - [TAB, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
   - - BT CLR
@@ -37,7 +48,7 @@ layers:
     - RET
     - {type: trans}
     - RALT
-  Numbers:
+  Num:
   - [TAB, '!', '@', '#', $, '%', ^, '&', '*', (, ), BSPC]
   - - LCTRL
     - {type: trans}
@@ -69,3 +80,106 @@ layers:
     - RET
     - {type: held}
     - RALT
+  Device:
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  Mouse:
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+combos:
+- p: [1, 2]
+  k: TAB
+- p: [22, 23]
+  k: HOME
+- p: [24, 25]
+  k: END
+- p: [11, 10]
+  k: BACKSPACE
+- p: [36, 37]
+  k: PAGE DOWN
+- p: [7, 8]
+  k: PAGE UP
+- p: [2, 3]
+  k: Ctl+W
+- p: [16, 15]
+  k: Ctl+A
