@@ -44,7 +44,7 @@ I'm using a 403017 315mAh LiPo battery on each half. The keyboard lasts for over
 
 ```toml
 CONFIG_ZMK_SLEEP=y
-CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=3600000 // Go to sleep after 1h
+CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=3600000 # Go to sleep after 1h
 ...
 ```
 
