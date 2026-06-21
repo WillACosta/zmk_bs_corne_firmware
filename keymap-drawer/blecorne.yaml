@@ -1,26 +1,37 @@
 layout: {zmk_keyboard: blecorne, layout_name: foostan_corne_6col_layout}
 layers:
   Base:
-  - [TAB, Q, W, E, R, T, Y, U, I, O, P, '`']
-  - - {t: ESCAPE, h: LEFT SHIFT}
-    - {t: A, h: LEFT GUI}
-    - {t: S, h: LEFT ALT}
-    - {t: D, h: LEFT CONTROL}
-    - {t: F, h: LEFT SHIFT}
+  - ['$$mdi:keyboard-tab$$', Q, W, E, R, T, Y, U, I, O, P, '`']
+  - - {t: '$$mdi:keyboard-esc$$', h: ⇧}
+    - {t: A, h: ⌘}
+    - {t: S, h: ⌥}
+    - {t: D, h: ⌃}
+    - {t: F, h: ⇧}
     - G
     - H
-    - {t: J, h: LEFT SHIFT}
-    - {t: K, h: LEFT CONTROL}
-    - {t: L, h: LEFT ALT}
-    - {t: ;, h: LEFT GUI}
+    - {t: J, h: ⇧}
+    - {t: K, h: ⌃}
+    - {t: L, h: ⌥}
+    - {t: ;, h: ⌘}
     - ''''
-  - [LEFT CONTROL, Z, X, C, V, B, N, M, ',', ., /, ESCAPE]
-  - - LGUI
+  - - {t: ⌃, type: ghost}
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - N
+    - M
+    - ','
+    - .
+    - /
+    - $$mdi:keyboard-esc$$
+  - - {t: ⌘, type: ghost}
     - '&td_device'
-    - SPACE
-    - RET
+    - $$mdi:keyboard-space$$
+    - $$mdi:keyboard-return$$
     - Num
-    - {t: BACKSPACE, h: LEFT ALT}
+    - {t: '$$mdi:backspace$$', h: ⌥}
   Symbol:
   - - {type: trans}
     - '!'
@@ -34,7 +45,7 @@ layers:
     - (
     - )
     - {type: trans}
-  - - '&bootloader'
+  - - {t: '$$mdi:restart$$', type: held}
     - {type: trans}
     - /
     - \
@@ -63,7 +74,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - DELETE
+    - $$mdi:backspace-reverse$$
   Num:
   - - {type: trans}
     - '1'
@@ -83,12 +94,12 @@ layers:
     - {type: trans}
     - F11
     - F12
-    - LEFT ARROW
-    - DOWN ARROW
-    - UP ARROW
-    - RIGHT ARROW
+    - $$mdi:arrow-left$$
+    - $$mdi:arrow-down$$
+    - $$mdi:arrow-up$$
+    - $$mdi:arrow-right$$
     - {type: trans}
-    - '&bootloader'
+    - {t: '$$mdi:restart$$', type: held}
   - - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -109,23 +120,23 @@ layers:
     - {type: trans}
   Device:
   - - {type: trans}
-    - BT 0
-    - BT 1
-    - BT 2
-    - BT 3
-    - BT 4
+    - {t: '$$mdi:bluetooth$$', s: '0'}
+    - {t: '$$mdi:bluetooth$$', s: '1'}
+    - {t: '$$mdi:bluetooth$$', s: '2'}
+    - {t: '$$mdi:bluetooth$$', s: '3'}
+    - {t: '$$mdi:bluetooth$$', s: '4'}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
-  - - BT CLR
-    - BRIGHTNESS INC
-    - BRIGHTNESS INC
-    - PREVIOUS
-    - PLAY PAUSE
-    - NEXT
+  - - {t: '$$mdi:bluetooth-off$$', type: held}
+    - $$mdi:brightness-7$$
+    - $$mdi:brightness-7$$
+    - $$mdi:skip-previous$$
+    - $$mdi:play-pause$$
+    - $$mdi:skip-next$$
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -135,9 +146,9 @@ layers:
   - - {type: trans}
     - {type: trans}
     - {type: trans}
-    - MUTE
-    - VOL DN
-    - VOL UP
+    - $$mdi:volume-mute$$
+    - $$mdi:volume-low$$
+    - $$mdi:volume-high$$
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -157,10 +168,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - '&mkp MB4'
-    - '&mkp LCLK'
-    - '&mkp MCLK'
-    - '&mkp RCLK'
+    - $$mdi:mouse-move-up$$
+    - $$mdi:mouse-left-click$$
+    - $$mdi:mouse-scroll$$
+    - $$mdi:mouse-right-click$$
     - {type: trans}
     - {type: trans}
   - - {type: trans}
@@ -169,10 +180,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - '&mmv MOVE_LEFT'
-    - '&mmv MOVE_DOWN'
-    - '&mmv MOVE_UP'
-    - '&mmv MOVE_RIGHT'
+    - $$mdi:cursor-move$$
+    - $$mdi:cursor-move$$
+    - $$mdi:cursor-move$$
+    - $$mdi:cursor-move$$
     - {type: trans}
     - {type: trans}
   - - {type: trans}
@@ -181,10 +192,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - '&msc SCRL_LEFT'
-    - '&msc SCRL_DOWN'
-    - '&msc SCRL_UP'
-    - '&msc SCRL_RIGHT'
+    - $$mdi:gesture-swipe-left$$
+    - $$mdi:gesture-swipe-down$$
+    - $$mdi:gesture-swipe-up$$
+    - $$mdi:gesture-swipe-right$$
     - {type: trans}
     - {type: trans}
   - - {type: trans}
@@ -195,17 +206,17 @@ layers:
     - {type: trans}
 combos:
 - p: [1, 2]
-  k: TAB
+  k: $$mdi:keyboard-tab$$
 - p: [18, 19]
-  k: HOME
+  k: $$mdi:home$$
 - p: [20, 21]
-  k: END
+  k: {t: End, type: ghost}
 - p: [10, 9]
-  k: BACKSPACE
+  k: $$mdi:backspace$$
 - p: [30, 31]
-  k: PAGE DOWN
+  k: $$mdi:chevron-double-down$$
 - p: [7, 6]
-  k: PAGE UP
+  k: $$mdi:chevron-double-up$$
 - p: [25, 26]
   k: Ctl+W
 - p: [13, 14]
