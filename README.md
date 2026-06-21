@@ -5,7 +5,7 @@ This is my custom [ZMK](https://zmk.dev/) keymap config for the **low profile** 
 <img src="./docs/assets/blecorne.JPEG" style="border-radius: 10px"/>
 
 > [!TIP]
-> 📸 Browse the **[keyboard build gallery](https://willacosta.github.io/wireless-corne_zmk_config/gallery/)** for more photos of the build!
+> 📸 Browse the **[keyboard build gallery](https://willacosta.github.io/zmk_bs_corne_firmware/gallery/)** for more photos of the build!
 
 ## Highlights of this build
 
