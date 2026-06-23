@@ -11,10 +11,10 @@ include:
   # (bluetooth connections, ZMK Studio keymap overrides, etc).
   # Display is explicitly disabled because settings_reset has no display
   # device in its device tree, which would otherwise cause a compile error.
-  - board: blecorne_left
-    shield: settings_reset
-    cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_ZMK_DISPLAY_WORK_QUEUE_DEDICATED=n
+  # - board: blecorne_left
+  #   shield: settings_reset
+  #   cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_ZMK_DISPLAY_WORK_QUEUE_DEDICATED=n
 
-  - board: blecorne_right
-    shield: settings_reset
-    cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_ZMK_DISPLAY_WORK_QUEUE_DEDICATED=n
+  # - board: blecorne_right
+  #   shield: settings_reset
+  #   cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_ZMK_DISPLAY_WORK_QUEUE_DEDICATED=n
