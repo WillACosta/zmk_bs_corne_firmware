@@ -31,41 +31,56 @@
         tab_combo {
             bindings = <&kp TAB>;
             key-positions = <1 2>;
+            slow-release;
         };
 
         home_combo {
             bindings = <&kp HOME>;
             key-positions = <18 19>;
+            slow-release;
         };
 
         end_combo {
             bindings = <&kp END>;
             key-positions = <20 21>;
+            slow-release;
         };
 
         bksp_combo {
             bindings = <&kp BACKSPACE>;
             key-positions = <10 9>;
+            slow-release;
         };
 
         pgdn_combo {
             bindings = <&kp PAGE_DOWN>;
             key-positions = <30 31>;
+            slow-release;
         };
 
         pgup_combo {
             bindings = <&kp PAGE_UP>;
             key-positions = <7 6>;
+            slow-release;
         };
 
         ctrl_w_combo {
             bindings = <&kp LC(W)>;
-            key-positions = <25 26>;
+            key-positions = <1 2>;
+            slow-release;
         };
 
         ctrl_a_combo {
             bindings = <&kp LC(A)>;
             key-positions = <13 14>;
+            slow-release;
+        };
+
+        enter_combo {
+            bindings = <&kp ENTER>;
+            key-positions = <17 16>;
+            layers = <0>;
+            slow-release;
         };
     };
 
@@ -76,11 +91,12 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <100>;
+            tapping-term-ms = <230>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
             hold-trigger-on-release;
+            quick-tap-ms = <160>;
         };
 
         hrm_right: hrm_right {
@@ -89,11 +105,12 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <100>;
+            tapping-term-ms = <230>;
+            require-prior-idle-ms = <125>;
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            quick-tap-ms = <160>;
         };
 
         ht_mod: ht_mod {
@@ -102,16 +119,19 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            require-prior-idle-ms = <90>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <100>;
             flavor = "balanced";
+            hold-trigger-on-release;
         };
 
         td_device: td_device {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_DEVICE";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&mo 2>;
+            bindings = <&mo 1>, <&mo 3>;
+
+            tapping-term-ms = <175>;
         };
     };
 
@@ -121,10 +141,10 @@
         base_layer {
             display-name = "Base";
             bindings = <
-&kp TAB                    &kp Q                 &kp W                 &kp E                     &kp R                   &kp T      &kp Y    &kp U                    &kp I                       &kp O                  &kp P                          &kp BACKSPACE
-&ht_mod LEFT_SHIFT ESCAPE  &hrm_left LEFT_GUI A  &hrm_left LEFT_ALT S  &hrm_left LEFT_CONTROL D  &hrm_left LEFT_SHIFT F  &kp G      &kp H    &hrm_right LEFT_SHIFT J  &hrm_right LEFT_CONTROL K   &hrm_right LEFT_ALT L  &hrm_right LEFT_GUI SEMICOLON  &kp SQT
-&kp LEFT_CONTROL           &kp Z                 &kp X                 &kp C                     &kp V                   &kp B      &kp N    &kp M                    &kp COMMA                   &kp DOT                &kp FSLH                       &kp ESCAPE
-                                                                       &kp LGUI                  &td_device              &kp SPACE  &kp RET  &mo 2                    &ht_mod LEFT_ALT BACKSPACE
+&kp TAB                      &kp Q                 &kp W                 &kp E                     &kp R                   &kp T      &kp Y    &kp U                    &kp I                       &kp O                  &kp P                          &kp BACKSPACE
+&kp LEFT_SHIFT               &hrm_left LEFT_GUI A  &hrm_left LEFT_ALT S  &hrm_left LEFT_CONTROL D  &hrm_left LEFT_SHIFT F  &kp G      &kp H    &hrm_right LEFT_SHIFT J  &hrm_right LEFT_CONTROL K   &hrm_right LEFT_ALT L  &hrm_right LEFT_GUI SEMICOLON  &kp SQT
+&ht_mod LEFT_CONTROL ESCAPE  &kp Z                 &kp X                 &kp C                     &kp V                   &kp B      &kp N    &kp M                    &kp COMMA                   &kp DOT                &kp FSLH                       &ht_mod LEFT_CONTROL ESCAPE
+                                                                         &kp LGUI                  &td_device              &kp SPACE  &kp RET  &mo 2                    &ht_mod LEFT_ALT BACKSPACE
             >;
         };
 
