@@ -143,7 +143,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-  - - {type: trans}
+  - - BT CLR ALL
     - {type: trans}
     - {type: trans}
     - $$mdi:volume-mute$$
@@ -156,7 +156,7 @@ layers:
     - {type: trans}
     - {type: trans}
   - - {type: trans}
-    - {type: trans}
+    - ''
     - {type: trans}
     - {type: trans}
     - {type: trans}
