@@ -510,12 +510,12 @@ svg.keymap g.key.held g.glyph circle {
 <use href="#mdi:chevron-double-up" xlink:href="#mdi:chevron-double-up" x="553" y="32" height="14" width="14.0" class="combo tap glyph mdi:chevron-double-up"/>
 </g>
 <g class="combo combopos-6">
-<rect rx="6" ry="6" x="98" y="29" width="28" height="26" class="combo"/>
-<text x="112" y="42" class="combo tap">Ctl+W</text>
+<rect rx="6" ry="6" x="154" y="18" width="28" height="26" class="combo"/>
+<text x="168" y="32" class="combo tap">Ctl+W</text>
 </g>
 <g class="combo combopos-7">
-<rect rx="6" ry="6" x="98" y="85" width="28" height="26" class="combo"/>
-<text x="112" y="98" class="combo tap">Ctl+A</text>
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap">Ctl+A</text>
 </g>
 <g class="combo combopos-8">
 <rect rx="6" ry="6" x="266" y="82" width="28" height="26" class="combo"/>
@@ -705,12 +705,12 @@ svg.keymap g.key.held g.glyph circle {
 <use href="#mdi:chevron-double-up" xlink:href="#mdi:chevron-double-up" x="553" y="32" height="14" width="14.0" class="combo tap glyph mdi:chevron-double-up"/>
 </g>
 <g class="combo combopos-6">
-<rect rx="6" ry="6" x="98" y="29" width="28" height="26" class="combo"/>
-<text x="112" y="42" class="combo tap">Ctl+W</text>
+<rect rx="6" ry="6" x="154" y="18" width="28" height="26" class="combo"/>
+<text x="168" y="32" class="combo tap">Ctl+W</text>
 </g>
 <g class="combo combopos-7">
-<rect rx="6" ry="6" x="98" y="85" width="28" height="26" class="combo"/>
-<text x="112" y="98" class="combo tap">Ctl+A</text>
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap">Ctl+A</text>
 </g>
 </g>
 </g>
@@ -887,12 +887,12 @@ svg.keymap g.key.held g.glyph circle {
 <use href="#mdi:chevron-double-up" xlink:href="#mdi:chevron-double-up" x="553" y="32" height="14" width="14.0" class="combo tap glyph mdi:chevron-double-up"/>
 </g>
 <g class="combo combopos-6">
-<rect rx="6" ry="6" x="98" y="29" width="28" height="26" class="combo"/>
-<text x="112" y="42" class="combo tap">Ctl+W</text>
+<rect rx="6" ry="6" x="154" y="18" width="28" height="26" class="combo"/>
+<text x="168" y="32" class="combo tap">Ctl+W</text>
 </g>
 <g class="combo combopos-7">
-<rect rx="6" ry="6" x="98" y="85" width="28" height="26" class="combo"/>
-<text x="112" y="98" class="combo tap">Ctl+A</text>
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap">Ctl+A</text>
 </g>
 </g>
 </g>
@@ -1069,12 +1069,12 @@ svg.keymap g.key.held g.glyph circle {
 <use href="#mdi:chevron-double-up" xlink:href="#mdi:chevron-double-up" x="553" y="32" height="14" width="14.0" class="combo tap glyph mdi:chevron-double-up"/>
 </g>
 <g class="combo combopos-6">
-<rect rx="6" ry="6" x="98" y="29" width="28" height="26" class="combo"/>
-<text x="112" y="42" class="combo tap">Ctl+W</text>
+<rect rx="6" ry="6" x="154" y="18" width="28" height="26" class="combo"/>
+<text x="168" y="32" class="combo tap">Ctl+W</text>
 </g>
 <g class="combo combopos-7">
-<rect rx="6" ry="6" x="98" y="85" width="28" height="26" class="combo"/>
-<text x="112" y="98" class="combo tap">Ctl+A</text>
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap">Ctl+A</text>
 </g>
 </g>
 </g>
@@ -1244,12 +1244,12 @@ svg.keymap g.key.held g.glyph circle {
 <use href="#mdi:chevron-double-up" xlink:href="#mdi:chevron-double-up" x="553" y="32" height="14" width="14.0" class="combo tap glyph mdi:chevron-double-up"/>
 </g>
 <g class="combo combopos-6">
-<rect rx="6" ry="6" x="98" y="29" width="28" height="26" class="combo"/>
-<text x="112" y="42" class="combo tap">Ctl+W</text>
+<rect rx="6" ry="6" x="154" y="18" width="28" height="26" class="combo"/>
+<text x="168" y="32" class="combo tap">Ctl+W</text>
 </g>
 <g class="combo combopos-7">
-<rect rx="6" ry="6" x="98" y="85" width="28" height="26" class="combo"/>
-<text x="112" y="98" class="combo tap">Ctl+A</text>
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<text x="168" y="88" class="combo tap">Ctl+A</text>
 </g>
 </g>
 </g>

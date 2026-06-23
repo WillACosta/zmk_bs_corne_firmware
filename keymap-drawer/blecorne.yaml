@@ -217,9 +217,9 @@ combos:
   k: $$mdi:chevron-double-down$$
 - p: [7, 6]
   k: $$mdi:chevron-double-up$$
-- p: [1, 2]
+- p: [3, 2]
   k: Ctl+W
-- p: [13, 14]
+- p: [14, 15]
   k: Ctl+A
 - p: [17, 16]
   k: $$mdi:keyboard-return$$
