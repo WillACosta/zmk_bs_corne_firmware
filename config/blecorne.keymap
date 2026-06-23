@@ -66,13 +66,13 @@
 
         ctrl_w_combo {
             bindings = <&kp LC(W)>;
-            key-positions = <1 2>;
+            key-positions = <3 2>;
             slow-release;
         };
 
         ctrl_a_combo {
             bindings = <&kp LC(A)>;
-            key-positions = <13 14>;
+            key-positions = <14 15>;
             slow-release;
         };
 
