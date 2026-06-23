@@ -2,7 +2,7 @@ layout: {zmk_keyboard: blecorne, layout_name: foostan_corne_6col_layout}
 layers:
   Base:
   - ['$$mdi:keyboard-tab$$', Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace$$']
-  - - {t: ⇧, type: ghost}
+  - - {t: '$$mdi:keyboard-esc$$', h: ⇧}
     - {t: A, h: ⌘}
     - {t: S, h: ⌥}
     - {t: D, h: ⌃}
@@ -14,7 +14,7 @@ layers:
     - {t: L, h: ⌥}
     - {t: ;, h: ⌘}
     - ''''
-  - - {t: '$$mdi:keyboard-esc$$', h: ⌃}
+  - - {t: ⌃, type: ghost}
     - Z
     - X
     - C
@@ -54,7 +54,7 @@ layers:
     - '-'
     - '='
     - '`'
-    - ''''
+    - .
     - {type: trans}
     - {type: trans}
   - - {type: trans}
@@ -66,7 +66,7 @@ layers:
     - _
     - +
     - '~'
-    - '"'
+    - ','
     - {type: trans}
     - {type: trans}
   - - {type: trans}
