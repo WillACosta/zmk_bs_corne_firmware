@@ -1,7 +1,18 @@
 layout: {zmk_keyboard: blecorne, layout_name: foostan_corne_6col_layout}
 layers:
   Base:
-  - ['$$mdi:keyboard-tab$$', Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace$$']
+  - - {type: trans}
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - {type: trans}
   - - {t: '$$mdi:keyboard-esc$$', h: ⇧}
     - {t: A, h: ⌘}
     - {t: S, h: ⌥}
@@ -31,7 +42,7 @@ layers:
     - $$mdi:keyboard-space$$
     - $$mdi:keyboard-return$$
     - Num
-    - {t: '$$mdi:backspace$$', h: ⌥}
+    - {t: ⌥, type: ghost}
   Symbol:
   - - {type: trans}
     - '!'
@@ -207,20 +218,31 @@ layers:
 combos:
 - p: [1, 2]
   k: $$mdi:keyboard-tab$$
+  l: [Base]
 - p: [18, 19]
   k: $$mdi:home$$
+  l: [Base]
 - p: [20, 21]
   k: {t: End, type: ghost}
+  l: [Base]
 - p: [10, 9]
   k: $$mdi:backspace$$
+  l: [Base]
 - p: [30, 31]
   k: $$mdi:chevron-double-down$$
+  l: [Base]
 - p: [7, 6]
   k: $$mdi:chevron-double-up$$
+  l: [Base]
 - p: [3, 2]
   k: Ctl+W
+  l: [Base]
 - p: [14, 15]
   k: Ctl+A
+  l: [Base]
 - p: [17, 16]
   k: $$mdi:keyboard-return$$
   l: [Base]
+- p: [10, 9]
+  k: DEL
+  l: [Num]
