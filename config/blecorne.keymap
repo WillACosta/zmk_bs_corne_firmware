@@ -153,10 +153,10 @@
         base_layer {
             display-name = "Base";
             bindings = <
-&trans                 &kp Q                 &kp W                 &kp E                     &kp R                   &kp T      &kp Y    &kp U                    &kp I                      &kp O                  &kp P                          &trans
-&mt LEFT_SHIFT ESCAPE  &hrm_left LEFT_GUI A  &hrm_left LEFT_ALT S  &hrm_left LEFT_CONTROL D  &hrm_left LEFT_SHIFT F  &kp G      &kp H    &hrm_right LEFT_SHIFT J  &hrm_right LEFT_CONTROL K  &hrm_right LEFT_ALT L  &hrm_right LEFT_GUI SEMICOLON  &kp SQT
-&kp LEFT_CONTROL       &kp Z                 &kp X                 &kp C                     &kp V                   &kp B      &kp N    &kp M                    &kp COMMA                  &kp DOT                &kp FSLH                       &ht_mod LEFT_CONTROL ESCAPE
-                                                                   &kp LGUI                  &td_device              &kp SPACE  &kp RET  &mo 2                    &kp LEFT_ALT
+&trans                 &kp Q                 &kp W                 &kp E                     &kp R                   &kp T      &kp Y    &kp U                    &kp I                       &kp O                  &kp P                          &trans
+&mt LEFT_SHIFT ESCAPE  &hrm_left LEFT_GUI A  &hrm_left LEFT_ALT S  &hrm_left LEFT_CONTROL D  &hrm_left LEFT_SHIFT F  &kp G      &kp H    &hrm_right LEFT_SHIFT J  &hrm_right LEFT_CONTROL K   &hrm_right LEFT_ALT L  &hrm_right LEFT_GUI SEMICOLON  &kp SQT
+&kp LEFT_CONTROL       &kp Z                 &kp X                 &kp C                     &kp V                   &kp B      &kp N    &kp M                    &kp COMMA                   &kp DOT                &kp FSLH                       &ht_mod LEFT_CONTROL ESCAPE
+                                                                   &kp LGUI                  &td_device              &kp SPACE  &kp RET  &mo 2                    &ht_mod LEFT_ALT BACKSPACE
             >;
         };
 
