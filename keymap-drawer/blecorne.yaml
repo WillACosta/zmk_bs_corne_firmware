@@ -42,7 +42,7 @@ layers:
     - $$mdi:keyboard-space$$
     - $$mdi:keyboard-return$$
     - Num
-    - {t: ⌥, type: ghost}
+    - {t: '$$mdi:backspace$$', h: ⌥}
   Symbol:
   - - {type: trans}
     - '!'
