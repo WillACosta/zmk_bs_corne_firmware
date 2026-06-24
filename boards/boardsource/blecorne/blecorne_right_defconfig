@@ -29,8 +29,8 @@ CONFIG_FLASH_MAP=y
 CONFIG_CLOCK_CONTROL_NRF_K32SRC_XTAL=y
 CONFIG_CLOCK_CONTROL_NRF_K32SRC_30PPM=y
 
-# Do not enable USB on right half
-CONFIG_ZMK_USB=n
+# Enable USB on right half so &bootloader behavior can trigger DFU reset
+CONFIG_ZMK_USB=y
 
 CONFIG_ZMK_BLE=y
 CONFIG_ZMK_SLEEP=y
