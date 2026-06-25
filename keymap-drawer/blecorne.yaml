@@ -1,18 +1,7 @@
 layout: {zmk_keyboard: blecorne, layout_name: foostan_corne_6col_layout}
 layers:
   Base:
-  - - {type: trans}
-    - Q
-    - W
-    - E
-    - R
-    - T
-    - Y
-    - U
-    - I
-    - O
-    - P
-    - {type: trans}
+  - ['$$mdi:keyboard-tab$$', Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace$$']
   - - {t: '$$mdi:keyboard-esc$$', h: ⇧}
     - {t: A, h: ⌘}
     - {t: S, h: ⌥}
@@ -131,11 +120,11 @@ layers:
     - {type: trans}
   Device:
   - - {type: trans}
-    - {t: '$$mdi:bluetooth$$', s: '0'}
-    - {t: '$$mdi:bluetooth$$', s: '1'}
-    - {t: '$$mdi:bluetooth$$', s: '2'}
-    - {t: '$$mdi:bluetooth$$', s: '3'}
-    - {t: '$$mdi:bluetooth$$', s: '4'}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -143,7 +132,7 @@ layers:
     - {type: trans}
     - {type: trans}
   - - {t: '$$mdi:bluetooth-off$$', type: held}
-    - $$mdi:brightness-7$$
+    - $$mdi:brightness-4$$
     - $$mdi:brightness-7$$
     - $$mdi:skip-previous$$
     - $$mdi:play-pause$$
@@ -154,7 +143,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-  - - BT CLR ALL
+  - - {type: trans}
     - {type: trans}
     - {type: trans}
     - $$mdi:volume-mute$$
@@ -185,12 +174,12 @@ layers:
     - $$mdi:mouse-right-click$$
     - {type: trans}
     - {type: trans}
-  - - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+  - - {t: '$$mdi:bluetooth-off$$', type: held}
+    - {t: '$$mdi:bluetooth$$', s: '0'}
+    - {t: '$$mdi:bluetooth$$', s: '1'}
+    - {t: '$$mdi:bluetooth$$', s: '2'}
+    - {t: '$$mdi:bluetooth$$', s: '3'}
+    - {t: '$$mdi:bluetooth$$', s: '4'}
     - $$mdi:cursor-move$$
     - $$mdi:cursor-move$$
     - $$mdi:cursor-move$$
@@ -198,8 +187,8 @@ layers:
     - {type: trans}
     - {type: trans}
   - - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - OUT BLE
+    - OUT USB
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -243,6 +232,3 @@ combos:
 - p: [17, 16]
   k: $$mdi:keyboard-return$$
   l: [Base]
-- p: [10, 9]
-  k: DEL
-  l: [Num]
