@@ -46,7 +46,7 @@
 
         bksp_combo {
             bindings = <&kp BACKSPACE>;
-            key-positions = <10 9>;
+            key-positions = <19 20>;
             slow-release;
             layers = <0>;
         };
