@@ -501,8 +501,8 @@ svg.keymap g.key.held g.glyph circle {
 <text x="672" y="88" class="combo ghost tap">End</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="714" y="29" width="28" height="26" class="combo"/>
-<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="721" y="35" height="14" width="14.0" class="combo tap glyph mdi:backspace"/>
+<rect rx="6" ry="6" x="602" y="74" width="28" height="26" class="combo"/>
+<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="609" y="80" height="14" width="14.0" class="combo tap glyph mdi:backspace"/>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="546" y="138" width="28" height="26" class="combo"/>

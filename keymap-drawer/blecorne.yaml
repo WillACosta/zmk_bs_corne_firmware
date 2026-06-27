@@ -214,7 +214,7 @@ combos:
 - p: [20, 21]
   k: {t: End, type: ghost}
   l: [Base]
-- p: [10, 9]
+- p: [19, 20]
   k: $$mdi:backspace$$
   l: [Base]
 - p: [30, 31]
