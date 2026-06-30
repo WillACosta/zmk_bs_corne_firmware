@@ -207,6 +207,7 @@ layers:
 combos:
 - p: [1, 2]
   k: $$mdi:keyboard-tab$$
+  l: [Base]
 - p: [18, 19]
   k: $$mdi:home$$
   l: [Base]
