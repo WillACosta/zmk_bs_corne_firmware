@@ -1,0 +1,6 @@
+menuconfig ZMK_CUSTOM_STATUS_BLE
+	bool "ZMK Custom Status BLE Service"
+	default y
+	depends on ZMK && ZMK_BLE
+	help
+	  Enable the custom BLE GATT service to expose keyboard active layer and split connection status.
