@@ -1,5 +1,6 @@
 #include <zephyr/types.h>
 #include <zephyr/sys/printk.h>
+#include <zephyr/device.h>
 #include <zephyr/bluetooth/bluetooth.h>
 #include <zephyr/bluetooth/gatt.h>
 #include <zephyr/bluetooth/uuid.h>
@@ -44,7 +45,7 @@ static void status_ccc_cfg_changed(const struct bt_gatt_attr *attr, uint16_t val
 
 // Define the GATT attributes array explicitly
 static struct bt_gatt_attr status_attrs[] = {
-    BT_GATT_PRIMARY_SERVICE(&status_uuid),
+    BT_GATT_PRIMARY_SERVICE(&status_uuid.uuid),
     
     // Active Layer Characteristic (Attribute Index 2 in this block)
     BT_GATT_CHARACTERISTIC(&layer_uuid.uuid,
