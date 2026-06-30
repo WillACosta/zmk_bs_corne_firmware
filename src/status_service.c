@@ -3,6 +3,7 @@
 #include <zephyr/bluetooth/bluetooth.h>
 #include <zephyr/bluetooth/gatt.h>
 #include <zephyr/bluetooth/uuid.h>
+#include <zephyr/init.h>
 #include <zmk/events/layer_state_changed.h>
 #include <zmk/events/split_peripheral_status_changed.h>
 #include <zmk/event_manager.h>
@@ -41,42 +42,43 @@ static void status_ccc_cfg_changed(const struct bt_gatt_attr *attr, uint16_t val
     // This callback is invoked when a client subscribes/unsubscribes to notifications
 }
 
-// Register the GATT Service
-BT_GATT_SERVICE_DEFINE(zmk_status_svc,
+// Define the GATT attributes array explicitly
+static struct bt_gatt_attr status_attrs[] = {
     BT_GATT_PRIMARY_SERVICE(&status_uuid),
     
-    // Active Layer Characteristic (Attribute Index 2 in this service block)
+    // Active Layer Characteristic (Attribute Index 2 in this block)
     BT_GATT_CHARACTERISTIC(&layer_uuid.uuid,
                            BT_GATT_CHRC_READ | BT_GATT_CHRC_NOTIFY,
                            BT_GATT_PERM_READ,
                            read_layer, NULL, &active_layer),
     BT_GATT_CCC(status_ccc_cfg_changed, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE),
     
-    // Split Connection Characteristic (Attribute Index 5 in this service block)
+    // Split Connection Characteristic (Attribute Index 5 in this block)
     BT_GATT_CHARACTERISTIC(&split_uuid.uuid,
                            BT_GATT_CHRC_READ | BT_GATT_CHRC_NOTIFY,
                            BT_GATT_PERM_READ,
                            read_split, NULL, &split_connected),
     BT_GATT_CCC(status_ccc_cfg_changed, BT_GATT_PERM_READ | BT_GATT_PERM_WRITE)
-);
+};
+
+// Define the GATT service struct referencing the attributes array
+static struct bt_gatt_service zmk_status_svc = BT_GATT_SERVICE(status_attrs);
 
 // Unified handler for ZMK Event Manager callbacks
 static int status_event_handler(const zmk_event_t *eh) {
     const struct zmk_layer_state_changed *layer_ev = as_zmk_layer_state_changed(eh);
     if (layer_ev) {
         active_layer = zmk_keymap_highest_active_layer();
-        // Notify all registered BLE subscribers of the layer change
-        // &zmk_status_svc.attrs[2] is the characteristic value attribute for layer index
-        bt_gatt_notify(NULL, &zmk_status_svc.attrs[2], &active_layer, sizeof(active_layer));
+        // Notify all registered BLE subscribers of the layer change using status_attrs[2]
+        bt_gatt_notify(NULL, &status_attrs[2], &active_layer, sizeof(active_layer));
         return 0;
     }
     
     const struct zmk_split_peripheral_status_changed *split_ev = as_zmk_split_peripheral_status_changed(eh);
     if (split_ev) {
         split_connected = split_ev->connected ? 1 : 0;
-        // Notify all registered BLE subscribers of the split connection change
-        // &zmk_status_svc.attrs[5] is the characteristic value attribute for split status
-        bt_gatt_notify(NULL, &zmk_status_svc.attrs[5], &split_connected, sizeof(split_connected));
+        // Notify all registered BLE subscribers of the split connection change using status_attrs[5]
+        bt_gatt_notify(NULL, &status_attrs[5], &split_connected, sizeof(split_connected));
         return 0;
     }
     
@@ -87,3 +89,11 @@ static int status_event_handler(const zmk_event_t *eh) {
 ZMK_LISTENER(status_listener, status_event_handler);
 ZMK_SUBSCRIPTION(status_listener, zmk_layer_state_changed);
 ZMK_SUBSCRIPTION(status_listener, zmk_split_peripheral_status_changed);
+
+// Initialize and register service on startup
+static int zmk_status_init(const struct device *dev) {
+    ARG_UNUSED(dev);
+    return bt_gatt_service_register(&zmk_status_svc);
+}
+
+SYS_INIT(zmk_status_init, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
