@@ -33,7 +33,7 @@ layers:
     - Num
     - {t: '$$mdi:backspace$$', h: ⌥}
   Symbol:
-  - - {type: trans}
+  - - $$mdi:backspace$$
     - '!'
     - '@'
     - '#'
@@ -87,7 +87,7 @@ layers:
     - '8'
     - '9'
     - '0'
-    - {type: trans}
+    - $$mdi:backspace-reverse$$
   - - {type: trans}
     - F2
     - F5
@@ -106,8 +106,8 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - $$mdi:home$$
+    - {t: End, type: ghost}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -131,7 +131,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-  - - {t: '$$mdi:bluetooth-off$$', type: held}
+  - - {type: trans}
     - $$mdi:brightness-4$$
     - $$mdi:brightness-7$$
     - $$mdi:skip-previous$$
@@ -186,9 +186,9 @@ layers:
     - $$mdi:cursor-move$$
     - {type: trans}
     - {type: trans}
-  - - {type: trans}
-    - OUT BLE
-    - OUT USB
+  - - BT CLR ALL
+    - OUT TOG
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -207,7 +207,6 @@ layers:
 combos:
 - p: [1, 2]
   k: $$mdi:keyboard-tab$$
-  l: [Base]
 - p: [18, 19]
   k: $$mdi:home$$
   l: [Base]
