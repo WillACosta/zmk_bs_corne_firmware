@@ -1,5 +1,6 @@
 #include <zephyr/types.h>
 #include <zephyr/sys/printk.h>
+#include <zephyr/sys/util.h>
 #include <zephyr/device.h>
 #include <zephyr/bluetooth/bluetooth.h>
 #include <zephyr/bluetooth/gatt.h>
@@ -22,9 +23,9 @@
 #define BT_UUID_ZMK_STATUS_SPLIT_VAL \
     BT_UUID_128_ENCODE(0x5F3A0002, 0xD0E1, 0x4D9A, 0x8E40, 0x12866D57AA42)
 
-static struct bt_uuid_128 status_uuid = BT_UUID_INIT_128(BT_UUID_ZMK_STATUS_VAL);
-static struct bt_uuid_128 layer_uuid = BT_UUID_INIT_128(BT_UUID_ZMK_STATUS_LAYER_VAL);
-static struct bt_uuid_128 split_uuid = BT_UUID_INIT_128(BT_UUID_ZMK_STATUS_SPLIT_VAL);
+static const struct bt_uuid_128 status_uuid = BT_UUID_INIT_128(BT_UUID_ZMK_STATUS_VAL);
+static const struct bt_uuid_128 layer_uuid = BT_UUID_INIT_128(BT_UUID_ZMK_STATUS_LAYER_VAL);
+static const struct bt_uuid_128 split_uuid = BT_UUID_INIT_128(BT_UUID_ZMK_STATUS_SPLIT_VAL);
 
 static uint8_t active_layer = 0;
 static uint8_t split_connected = 0;
