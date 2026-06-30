@@ -2,10 +2,18 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: willacosta_modules
+      url-base: https://github.com/WillACosta
+
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+
+    - name: zmk-status-ble-module
+      remote: willacosta_modules
+      revision: main
+
   self:
     path: config
