@@ -77,3 +77,11 @@ I've [open-sourced](https://github.com/WillACosta/boardsource-wireless-plate-fil
 > If the halves do not communicate with each other after the flashing process, you may need to turn on the halves and press the "reset button" on both halves at the same time, so they can synchronize.
 
 > For further information go to the [official documentation](https://v0-3-branch.zmk.dev/docs/user-setup#flashing-uf2-files) for ZMK.
+
+### Intermittent right-half connection
+
+The left half is the split **central** and the right half is the BLE **peripheral**. A right-half dropout is therefore normally the inter-half BLE connection, not the Bluetooth connection to the computer. The normal firmware uses ZMK's connection-stability setting (1M PHY), maximum nRF52840 transmit power, and the HolyIOT module's built-in 32 kHz crystal.
+
+If the right half still drops out, first confirm that it does so while both halves are fully charged and close together. Then flash `reset_left` and `reset_right`, flash the regular left/right firmware again, and reset both halves at roughly the same time. This clears and recreates the stored split bond; ordinary firmware flashing does not clear it.
+
+The workflow also builds `bs_corne_left_debug` and `bs_corne_right_debug`. Flash these only to capture a recurrence over USB: they expose a USB serial log and consume more power. On macOS, connect with `cu -l /dev/tty.usbmodem*` after identifying the device with `ls /dev/tty.usbmodem*`. While testing over USB, select BLE output from the device layer using the output-toggle binding if keystrokes need to continue going to the paired host. Logs that show the peripheral disconnecting implicate the split link; a host-only disconnect with a still-working right half implicates the host adapter/profile instead.

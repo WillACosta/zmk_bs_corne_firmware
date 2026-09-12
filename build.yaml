@@ -18,3 +18,15 @@ include:
     shield: settings_reset
     cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_ZMK_DISPLAY_WORK_QUEUE_DEDICATED=n
     artifact-name: reset_right
+
+  # Use only while reproducing a dropout. USB logging increases battery use.
+  - board: blecorne_left
+    shield: nice_view
+    snippet: zmk-usb-logging
+    artifact-name: bs_corne_left_debug
+
+  - board: blecorne_right
+    shield: nice_view
+    snippet: zmk-usb-logging
+    cmake-args: -DCONFIG_ZMK_STATUS_ADVERTISEMENT=n
+    artifact-name: bs_corne_right_debug
