@@ -27,7 +27,7 @@ layers:
     - /
     - {t: '$$mdi:keyboard-esc$$', h: ⌃}
   - - {t: ⌘, type: ghost}
-    - '&td_media'
+    - sym
     - $$mdi:keyboard-space$$
     - $$mdi:keyboard-return$$
     - num
@@ -70,10 +70,10 @@ layers:
     - {type: trans}
     - {type: trans}
   - - {type: trans}
-    - ''
+    - {type: held}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
+    - dev
     - {type: trans}
   num:
   - - {type: trans}
@@ -118,63 +118,20 @@ layers:
     - {type: trans}
     - {type: held}
     - {type: trans}
-  med:
-  - - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+  dev:
   - - {type: trans}
     - $$mdi:brightness-4$$
     - $$mdi:brightness-7$$
-    - $$mdi:skip-previous$$
+    - $$mdi:skip-next$$
     - $$mdi:play-pause$$
     - $$mdi:skip-next$$
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-  - - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - $$mdi:volume-mute$$
-    - $$mdi:volume-low$$
-    - $$mdi:volume-high$$
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-  - - {type: trans}
-    - ''
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-  dev:
-  - - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
     - $$mdi:mouse-move-up$$
     - $$mdi:mouse-left-click$$
     - $$mdi:mouse-scroll-wheel$$
     - $$mdi:mouse-right-click$$
     - {type: trans}
     - {type: trans}
-  - - {t: '$$mdi:restart$$', type: held}
+  - - {t: '$$mdi:bluetooth-off$$', type: held}
     - {t: '$$mdi:bluetooth$$', s: '0'}
     - {t: '$$mdi:bluetooth$$', s: '1'}
     - {t: '$$mdi:bluetooth$$', s: '2'}
@@ -185,21 +142,21 @@ layers:
     - $$mdi:cursor-move$$
     - $$mdi:cursor-move$$
     - {type: trans}
-    - {t: '$$mdi:restart$$', type: held}
-  - - {t: '$$mdi:bluetooth-off$$', type: held}
-    - OUT TOG
+    - '&p_email'
+  - - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - $$mdi:volume-mute$$
+    - $$mdi:volume-low$$
+    - VOLUME UP
     - $$mdi:gesture-swipe-left$$
     - $$mdi:gesture-swipe-down$$
     - $$mdi:gesture-swipe-up$$
     - $$mdi:gesture-swipe-right$$
     - {type: trans}
-    - BT CLR ALL
+    - {type: trans}
   - - {type: trans}
-    - ''
+    - {type: held}
     - {type: trans}
     - {type: trans}
     - {type: held}
@@ -237,5 +194,7 @@ combos:
   l: [base]
 - p: [2, 3, 4]
   k: Alt+TAB
-- p: [12, 1]
-  k: $$mdi:backspace-reverse$$
+- p: [13, 17]
+  k: Gui+]
+- p: [25, 29]
+  k: Gui+[
