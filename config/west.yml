@@ -8,12 +8,12 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: 4de313367288aad5aeaa1243890e40dc813f7008
       import: app/west.yml
 
     - name: prospector-zmk-module
       remote: willACosta
-      revision: main
+      revision: 6104aea8c972ea422dff11a431d3f4c43c02c44d
       path: modules/prospector-zmk-module
 
   self:
